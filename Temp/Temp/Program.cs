@@ -2,312 +2,292 @@
 using System.Collections.Generic;
 using System.IO;
 
-// Класс для хранения данных об одной продаже
-class Sale
+namespace DemandForecastingApp
 {
-    // Название товара
-    public string Product { get; set; }
-
-    // Дата продажи
-    public DateTime Date { get; set; }
-
-    // Количество проданных единиц
-    public int Quantity { get; set; }
-
-    // Конструктор для создания объекта продажи
-    public Sale(string product, DateTime date, int quantity)
+    /// <summary>
+    /// Класс для хранения данных об одной продаже
+    /// </summary>
+    public class Sale
     {
-        Product = product;
-        Date = date;
-        Quantity = quantity;
-    }
-}
+        public string Product { get; set; }  // Название товара
+        public DateTime Date { get; set; }   // Дата продажи
+        public int Quantity { get; set; }    // Количество проданных единиц
 
-// Класс для анализа данных о продажах
-class SalesAnalyzer
-{
-    // Метод для удаления аномальных значений (выбросов)
-    public List<Sale> RemoveOutliers(List<Sale> sales)
-    {
-        // Создаем список для отфильтрованных продаж
-        List<Sale> filteredSales = new List<Sale>();
-
-        // Сначала группируем продажи по товарам
-        Dictionary<string, List<Sale>> groupedSales = GroupSalesByProduct(sales);
-
-        // Обрабатываем каждую группу товаров отдельно
-        foreach (KeyValuePair<string, List<Sale>> productGroup in groupedSales)
+        public Sale(string product, DateTime date, int quantity)
         {
-            // Получаем список количеств продаж для текущего товара
-            List<int> quantities = new List<int>();
-            foreach (Sale sale in productGroup.Value)
-            {
-                quantities.Add(sale.Quantity);
-            }
-
-            // Вычисляем медиану и стандартное отклонение
-            double median = CalculateMedian(quantities);
-            double stdDev = CalculateStandardDeviation(quantities, median);
-
-            // Определяем границы нормальных значений
-            double lowerBound = median - 2 * stdDev;
-            double upperBound = median + 2 * stdDev;
-
-            // Добавляем только те продажи, которые попадают в границы
-            foreach (Sale sale in productGroup.Value)
-            {
-                if (sale.Quantity >= lowerBound && sale.Quantity <= upperBound)
-                {
-                    filteredSales.Add(sale);
-                }
-            }
+            Product = product;
+            Date = date;
+            Quantity = quantity;
         }
-
-        return filteredSales;
     }
 
-    // Метод для группировки продаж по товарам
-    private Dictionary<string, List<Sale>> GroupSalesByProduct(List<Sale> sales)
+    /// <summary>
+    /// Класс для анализа данных о продажах
+    /// </summary>
+    public class SalesAnalyzer
     {
-        Dictionary<string, List<Sale>> groupedSales = new Dictionary<string, List<Sale>>();
-
-        foreach (Sale sale in sales)
+        /// <summary>
+        /// Удаляет аномальные значения (выбросы) из данных о продажах
+        /// </summary>
+        public List<Sale> RemoveOutliers(List<Sale> sales)
         {
-            // Если товар уже есть в словаре, добавляем продажу в его список
-            if (groupedSales.ContainsKey(sale.Product))
+            List<Sale> filteredSales = new List<Sale>();
+            Dictionary<string, List<Sale>> groupedSales = new Dictionary<string, List<Sale>>();
+
+            // Группируем продажи по товарам
+            foreach (Sale sale in sales)
             {
+                if (!groupedSales.ContainsKey(sale.Product))
+                {
+                    groupedSales[sale.Product] = new List<Sale>();
+                }
                 groupedSales[sale.Product].Add(sale);
             }
-            // Если товара еще нет, создаем новую запись
-            else
+
+            // Обрабатываем каждую группу товаров
+            foreach (var productGroup in groupedSales)
             {
-                groupedSales[sale.Product] = new List<Sale> { sale };
-            }
-        }
-
-        return groupedSales;
-    }
-
-    // Метод для вычисления медианы
-    private double CalculateMedian(List<int> values)
-    {
-        // Создаем копию списка, чтобы не менять оригинал
-        List<int> sortedValues = new List<int>(values);
-
-        // Сортируем значения по возрастанию
-        sortedValues.Sort();
-
-        int count = sortedValues.Count;
-
-        // Если количество элементов четное
-        if (count % 2 == 0)
-        {
-            // Берем среднее двух центральных значений
-            return (sortedValues[count / 2 - 1] + sortedValues[count / 2]) / 2.0;
-        }
-        // Если нечетное
-        else
-        {
-            // Берем центральное значение
-            return sortedValues[count / 2];
-        }
-    }
-
-    // Метод для вычисления стандартного отклонения
-    private double CalculateStandardDeviation(List<int> values, double mean)
-    {
-        double sumOfSquares = 0;
-
-        // Считаем сумму квадратов отклонений от среднего
-        foreach (int value in values)
-        {
-            sumOfSquares += Math.Pow(value - mean, 2);
-        }
-
-        // Делим сумму на количество элементов и извлекаем корень
-        return Math.Sqrt(sumOfSquares / values.Count);
-    }
-
-    // Метод для вычисления средних продаж по товарам
-    public Dictionary<string, double> CalculateAverageSales(List<Sale> sales)
-    {
-        Dictionary<string, List<Sale>> groupedSales = GroupSalesByProduct(sales);
-        Dictionary<string, double> averageSales = new Dictionary<string, double>();
-
-        foreach (KeyValuePair<string, List<Sale>> productGroup in groupedSales)
-        {
-            double sum = 0;
-
-            // Считаем сумму продаж для текущего товара
-            foreach (Sale sale in productGroup.Value)
-            {
-                sum += sale.Quantity;
-            }
-
-            // Вычисляем среднее значение
-            double average = sum / productGroup.Value.Count;
-            averageSales[productGroup.Key] = average;
-        }
-
-        return averageSales;
-    }
-}
-
-// Класс для прогнозирования спроса
-class DemandForecaster
-{
-    // Метод для создания прогноза спроса
-    public Dictionary<string, double> ForecastDemand(
-        Dictionary<string, double> averageSales,
-        int forecastDays)
-    {
-        Dictionary<string, double> forecast = new Dictionary<string, double>();
-
-        // Для каждого товара умножаем средние продажи на количество дней
-        foreach (KeyValuePair<string, double> item in averageSales)
-        {
-            forecast[item.Key] = item.Value * forecastDays;
-        }
-
-        return forecast;
-    }
-}
-
-// Класс для работы с файлами
-class FileManager
-{
-    // Метод для загрузки данных из CSV-файла
-    public List<Sale> LoadSalesFromCsv(string filePath)
-    {
-        List<Sale> sales = new List<Sale>();
-
-        try
-        {
-            // Читаем все строки из файла
-            string[] lines = File.ReadAllLines(filePath);
-
-            foreach (string line in lines)
-            {
-                // Разбиваем строку на части по разделителю ';'
-                string[] parts = line.Split(';');
-
-                // Проверяем, что строка содержит все необходимые данные
-                if (parts.Length == 3)
+                List<int> quantities = new List<int>();
+                foreach (Sale sale in productGroup.Value)
                 {
-                    string product = parts[0].Trim();
-                    DateTime date = DateTime.Parse(parts[1].Trim());
-                    int quantity = int.Parse(parts[2].Trim());
-
-                    // Создаем объект продажи и добавляем в список
-                    sales.Add(new Sale(product, date, quantity));
-                }
-            }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Ошибка при чтении файла: " + ex.Message);
-        }
-
-        return sales;
-    }
-
-    // Метод для сохранения прогноза в файл
-    public void SaveForecastToFile(
-        Dictionary<string, double> forecast,
-        string filePath)
-    {
-        try
-        {
-            // Создаем поток для записи в файл
-            using (StreamWriter writer = new StreamWriter(filePath))
-            {
-                writer.WriteLine("Прогноз спроса на товары:");
-                writer.WriteLine("--------------------------");
-
-                // Записываем прогноз по каждому товару
-                foreach (KeyValuePair<string, double> item in forecast)
-                {
-                    writer.WriteLine("{0}: {1} единиц",
-                        item.Key,
-                        Math.Round(item.Value, 2));
+                    quantities.Add(sale.Quantity);
                 }
 
-                writer.WriteLine("--------------------------");
-                writer.WriteLine("Дата создания: {0}", DateTime.Now);
+                // Вычисляем медиану
+                quantities.Sort();
+                double median;
+                int count = quantities.Count;
+
+                if (count % 2 == 0)
+                {
+                    median = (quantities[count / 2 - 1] + quantities[count / 2]) / 2.0;
+                }
+                else
+                {
+                    median = quantities[count / 2];
+                }
+
+                // Вычисляем стандартное отклонение
+                double sumOfSquares = 0;
+                foreach (int quantity in quantities)
+                {
+                    sumOfSquares += Math.Pow(quantity - median, 2);
+                }
+                double stdDev = Math.Sqrt(sumOfSquares / quantities.Count);
+
+                // Определяем границы нормальных значений
+                double lowerBound = median - 2 * stdDev;
+                double upperBound = median + 2 * stdDev;
+
+                // Фильтруем продажи
+                foreach (Sale sale in productGroup.Value)
+                {
+                    if (sale.Quantity >= lowerBound && sale.Quantity <= upperBound)
+                    {
+                        filteredSales.Add(sale);
+                    }
+                }
             }
 
-            Console.WriteLine("Прогноз успешно сохранен в файл: " + filePath);
+            return filteredSales;
         }
-        catch (Exception ex)
+
+        /// <summary>
+        /// Вычисляет средние продажи по каждому товару
+        /// </summary>
+        public Dictionary<string, double> CalculateAverageSales(List<Sale> sales)
         {
-            Console.WriteLine("Ошибка при сохранении файла: " + ex.Message);
+            Dictionary<string, List<Sale>> groupedSales = new Dictionary<string, List<Sale>>();
+            Dictionary<string, double> averageSales = new Dictionary<string, double>();
+
+            // Группируем продажи по товарам
+            foreach (Sale sale in sales)
+            {
+                if (!groupedSales.ContainsKey(sale.Product))
+                {
+                    groupedSales[sale.Product] = new List<Sale>();
+                }
+                groupedSales[sale.Product].Add(sale);
+            }
+
+            // Вычисляем средние значения
+            foreach (var productGroup in groupedSales)
+            {
+                double sum = 0;
+                foreach (Sale sale in productGroup.Value)
+                {
+                    sum += sale.Quantity;
+                }
+                averageSales[productGroup.Key] = sum / productGroup.Value.Count;
+            }
+
+            return averageSales;
         }
     }
-}
 
-class Program
-{
-    static void Main()
+    /// <summary>
+    /// Класс для прогнозирования спроса
+    /// </summary>
+    public class DemandForecaster
     {
-        Console.WriteLine("Программа прогнозирования спроса");
-        Console.WriteLine("---------------------------------");
-
-        // Создаем объект для работы с файлами
-        FileManager fileManager = new FileManager();
-
-        // Загружаем данные о продажах
-        Console.WriteLine("Загружаем данные из файла sales.csv...");
-        List<Sale> sales = fileManager.LoadSalesFromCsv("C:\\Users\\Савелий\\source\\repos\\WorkRepository\\Temp\\Temp\\sales.csv");
-
-        // Проверяем, что данные загрузились
-        if (sales.Count == 0)
+        /// <summary>
+        /// Рассчитывает прогноз спроса на указанное количество дней
+        /// </summary>
+        public Dictionary<string, double> ForecastDemand(Dictionary<string, double> averageSales, int days)
         {
-            Console.WriteLine("Нет данных для анализа. Проверьте файл sales.csv");
+            Dictionary<string, double> forecast = new Dictionary<string, double>();
+
+            foreach (var item in averageSales)
+            {
+                forecast[item.Key] = item.Value * days;
+            }
+
+            return forecast;
+        }
+    }
+
+    /// <summary>
+    /// Класс для работы с файлами
+    /// </summary>
+    public class FileManager
+    {
+        /// <summary>
+        /// Загружает данные о продажах из CSV-файла
+        /// </summary>
+        public List<Sale> LoadSalesFromCsv(string filePath)
+        {
+            List<Sale> sales = new List<Sale>();
+
+            try
+            {
+                string[] lines = File.ReadAllLines(filePath);
+
+                foreach (string line in lines)
+                {
+                    string[] parts = line.Split(';');
+
+                    if (parts.Length == 3)
+                    {
+                        string product = parts[0].Trim();
+                        DateTime date = DateTime.Parse(parts[1].Trim());
+                        int quantity = int.Parse(parts[2].Trim());
+
+                        sales.Add(new Sale(product, date, quantity));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка при чтении файла: {ex.Message}");
+            }
+
+            return sales;
+        }
+
+        /// <summary>
+        /// Сохраняет прогноз в текстовый файл
+        /// </summary>
+        public void SaveForecastToFile(Dictionary<string, double> forecast, string filePath)
+        {
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    writer.WriteLine("Прогноз спроса на товары:");
+                    writer.WriteLine("--------------------------");
+
+                    foreach (var item in forecast)
+                    {
+                        writer.WriteLine($"{item.Key}: {Math.Round(item.Value, 2)} единиц");
+                    }
+
+                    writer.WriteLine("--------------------------");
+                    writer.WriteLine($"Дата создания: {DateTime.Now}");
+                }
+
+                Console.WriteLine($"Прогноз успешно сохранен в файл: {filePath}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка при сохранении файла: {ex.Message}");
+            }
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Программа прогнозирования спроса");
+            Console.WriteLine("---------------------------------");
+
+            // Получаем путь к папке с исполняемым файлом
+            string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+
+            // Получаем путь к папке проекта (на 3 уровня выше чем bin/Debug)
+            string projectDir = Directory.GetParent(Directory.GetParent(Directory.GetParent(baseDir).FullName).FullName).FullName;
+
+            // Формируем пути к файлам относительно папки проекта
+            string salesFilePath = Path.Combine(projectDir, "sales.csv");
+            string forecastFilePath = Path.Combine(projectDir, "forecast.txt");
+
+            Console.WriteLine($"Ищем файл данных: {salesFilePath}");
+
+            // Создаем экземпляр класса для работы с файлами
+            FileManager fileManager = new FileManager();
+
+            // Загружаем данные о продажах
+            List<Sale> sales = fileManager.LoadSalesFromCsv(salesFilePath);
+
+            if (sales.Count == 0)
+            {
+                Console.WriteLine("Нет данных для анализа. Проверьте файл sales.csv");
+                Console.ReadKey();
+                return;
+            }
+
+            Console.WriteLine($"Загружено {sales.Count} записей о продажах");
+
+            // Создаем анализатор продаж
+            SalesAnalyzer analyzer = new SalesAnalyzer();
+
+            // Удаляем выбросы из данных
+            Console.WriteLine("Фильтруем данные...");
+            List<Sale> filteredSales = analyzer.RemoveOutliers(sales);
+            Console.WriteLine($"После фильтрации осталось {filteredSales.Count} записей");
+
+            // Вычисляем средние продажи по товарам
+            Console.WriteLine("Вычисляем средние продажи...");
+            Dictionary<string, double> averageSales = analyzer.CalculateAverageSales(filteredSales);
+
+            // Создаем прогнозировщик спроса
+            DemandForecaster forecaster = new DemandForecaster();
+
+            // Запрашиваем у пользователя период прогнозирования
+            Console.Write("\nВведите количество дней для прогноза: ");
+            int forecastDays;
+            while (!int.TryParse(Console.ReadLine(), out forecastDays) || forecastDays <= 0)
+            {
+                Console.Write("Введите положительное целое число: ");
+            }
+
+            // Получаем прогноз спроса
+            Dictionary<string, double> forecast = forecaster.ForecastDemand(averageSales, forecastDays);
+
+            // Выводим результаты
+            Console.WriteLine("\nРезультаты прогноза:");
+            Console.WriteLine("-------------------");
+            foreach (var item in forecast)
+            {
+                Console.WriteLine($"{item.Key}: {Math.Round(item.Value, 2)} единиц");
+            }
+            Console.WriteLine("-------------------");
+
+            // Сохраняем прогноз в файл
+            fileManager.SaveForecastToFile(forecast, forecastFilePath);
+
+            Console.WriteLine("\nНажмите любую клавишу для выхода...");
             Console.ReadKey();
-            return;
         }
-
-        Console.WriteLine("Загружено {0} записей о продажах", sales.Count);
-
-        // Создаем анализатор продаж
-        SalesAnalyzer analyzer = new SalesAnalyzer();
-
-        // Удаляем выбросы из данных
-        Console.WriteLine("Фильтруем данные...");
-        List<Sale> filteredSales = analyzer.RemoveOutliers(sales);
-        Console.WriteLine("После фильтрации осталось {0} записей", filteredSales.Count);
-
-        // Вычисляем средние продажи по товарам
-        Console.WriteLine("Вычисляем средние продажи...");
-        Dictionary<string, double> averageSales = analyzer.CalculateAverageSales(filteredSales);
-
-        // Создаем прогнозировщик спроса
-        DemandForecaster forecaster = new DemandForecaster();
-
-        // Запрашиваем у пользователя период прогнозирования
-        Console.Write("\nВведите количество дней для прогноза: ");
-        int forecastDays;
-        while (!int.TryParse(Console.ReadLine(), out forecastDays) || forecastDays <= 0)
-        {
-            Console.Write("Введите положительное целое число: ");
-        }
-
-        // Получаем прогноз спроса
-        Dictionary<string, double> forecast = forecaster.ForecastDemand(averageSales, forecastDays);
-
-        // Выводим результаты
-        Console.WriteLine("\nРезультаты прогноза:");
-        Console.WriteLine("-------------------");
-        foreach (KeyValuePair<string, double> item in forecast)
-        {
-            Console.WriteLine("{0}: {1} единиц", item.Key, Math.Round(item.Value, 2));
-        }
-        Console.WriteLine("-------------------");
-
-        // Сохраняем прогноз в файлj
-        fileManager.SaveForecastToFile(forecast, "C:\\Users\\Савелий\\source\\repos\\WorkRepository\\Temp\\Temp\\forecast.txt");
-
-        Console.WriteLine("\nНажмите любую клавишу для выхода...");
-        Console.ReadKey();
     }
 }

@@ -5,3 +5,10 @@ C:\Users\Обама\source\repos\Temp\Temp\obj\Debug\Temp.csproj.AssemblyReferen
 C:\Users\Обама\source\repos\Temp\Temp\obj\Debug\Temp.csproj.CoreCompileInputs.cache
 C:\Users\Обама\source\repos\Temp\Temp\obj\Debug\Temp.exe
 C:\Users\Обама\source\repos\Temp\Temp\obj\Debug\Temp.pdb
+C:\Users\Дмитрий\Documents\GitHub\WorkRepository\Temp\Temp\obj\Debug\Temp.csproj.AssemblyReference.cache
+C:\Users\Дмитрий\Documents\GitHub\WorkRepository\Temp\Temp\obj\Debug\Temp.csproj.CoreCompileInputs.cache
+C:\Users\Дмитрий\Documents\GitHub\WorkRepository\Temp\Temp\obj\Debug\Temp.exe
+C:\Users\Дмитрий\Documents\GitHub\WorkRepository\Temp\Temp\obj\Debug\Temp.pdb
+C:\Users\Дмитрий\Documents\GitHub\WorkRepository\Temp\Temp\bin\Debug\Temp.exe.config
+C:\Users\Дмитрий\Documents\GitHub\WorkRepository\Temp\Temp\bin\Debug\Temp.exe
+C:\Users\Дмитрий\Documents\GitHub\WorkRepository\Temp\Temp\bin\Debug\Temp.pdb
