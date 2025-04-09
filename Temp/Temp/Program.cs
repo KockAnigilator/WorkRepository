@@ -257,7 +257,7 @@ class Program
 
         // Загружаем данные о продажах
         Console.WriteLine("Загружаем данные из файла sales.csv...");
-        List<Sale> sales = fileManager.LoadSalesFromCsv("ЗДЕСЬ ДОЛЖЕН БЫТЬ ВАШ ПУТЬ К CSV ФАЙЛУ");
+        List<Sale> sales = fileManager.LoadSalesFromCsv("C:\\Users\\Савелий\\source\\repos\\WorkRepository\\Temp\\Temp\\sales.csv");
 
         // Проверяем, что данные загрузились
         if (sales.Count == 0)
@@ -305,7 +305,7 @@ class Program
         Console.WriteLine("-------------------");
 
         // Сохраняем прогноз в файлj
-        fileManager.SaveForecastToFile(forecast, "СДЕСЬ ДОЛЖЕН БЫТЬ ВАШ ПУТЬ ДО TXT ФАЙЛА С РЕЗУЛЬТАТАМИ");
+        fileManager.SaveForecastToFile(forecast, "C:\\Users\\Савелий\\source\\repos\\WorkRepository\\Temp\\Temp\\forecast.txt");
 
         Console.WriteLine("\nНажмите любую клавишу для выхода...");
         Console.ReadKey();

@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\u041E\u0431\u0430\u043C\u0430\\source\\repos\\Temp\\",
+  "WorkspaceRootPath": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|c:\\users\\\u043E\u0431\u0430\u043C\u0430\\source\\repos\\temp\\temp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\workrepository\\temp\\temp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|solutionrelative:temp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|c:\\users\\\u043E\u0431\u0430\u043C\u0430\\source\\repos\\temp\\temp\\forecast.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\temp\\forecast.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|solutionrelative:temp\\forecast.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|c:\\users\\\u043E\u0431\u0430\u043C\u0430\\source\\repos\\temp\\temp\\sales.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\temp\\sales.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|solutionrelative:temp\\sales.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
@@ -22,43 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "forecast.txt",
-              "DocumentMoniker": "C:\\Users\\\u041E\u0431\u0430\u043C\u0430\\source\\repos\\Temp\\Temp\\forecast.txt",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\forecast.txt",
               "RelativeDocumentMoniker": "Temp\\forecast.txt",
-              "ToolTip": "C:\\Users\\\u041E\u0431\u0430\u043C\u0430\\source\\repos\\Temp\\Temp\\forecast.txt",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\forecast.txt",
               "RelativeToolTip": "Temp\\forecast.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-04-09T14:52:22.267Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T14:52:22.267Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "sales.csv",
-              "DocumentMoniker": "C:\\Users\\\u041E\u0431\u0430\u043C\u0430\\source\\repos\\Temp\\Temp\\sales.csv",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\sales.csv",
               "RelativeDocumentMoniker": "Temp\\sales.csv",
-              "ToolTip": "C:\\Users\\\u041E\u0431\u0430\u043C\u0430\\source\\repos\\Temp\\Temp\\sales.csv",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\sales.csv",
               "RelativeToolTip": "Temp\\sales.csv",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2025-04-09T14:50:34.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T14:50:34.793Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\\u041E\u0431\u0430\u043C\u0430\\source\\repos\\Temp\\Temp\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\Program.cs",
               "RelativeDocumentMoniker": "Temp\\Program.cs",
-              "ToolTip": "C:\\Users\\\u041E\u0431\u0430\u043C\u0430\\source\\repos\\Temp\\Temp\\Program.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\Program.cs",
               "RelativeToolTip": "Temp\\Program.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAuwIMAAABNAAAAAAAAAA==",
+              "ViewState": "AgIAAPwAAAAAAAAAAAAAAAoBAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T14:49:21.008Z",
               "EditorCaption": ""
