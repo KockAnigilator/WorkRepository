@@ -7,12 +7,36 @@
       "RelativeMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|solutionrelative:temp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\temp\\forecast.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|solutionrelative:temp\\forecast.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\workrepository\\temp\\temp\\\u0444\u0430\u0439\u043B\u044B\\sales.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|solutionrelative:temp\\\u0444\u0430\u0439\u043B\u044B\\sales.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\temp\\sales.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|solutionrelative:temp\\sales.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\workrepository\\temp\\temp\\\u0440\u0430\u0431\u043E\u0442\u0430 \u0441 \u0444\u0430\u0439\u043B\u0430\u043C\u0438\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|solutionrelative:temp\\\u0440\u0430\u0431\u043E\u0442\u0430 \u0441 \u0444\u0430\u0439\u043B\u0430\u043C\u0438\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\workrepository\\temp\\temp\\\u0441\u0435\u0440\u0432\u0438\u0441\u044B\\demandforecaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|solutionrelative:temp\\\u0441\u0435\u0440\u0432\u0438\u0441\u044B\\demandforecaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\workrepository\\temp\\temp\\\u0430\u043D\u0430\u043B\u0438\u0437\u0430\u0442\u043E\u0440\u044B\\salesanalyzer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|solutionrelative:temp\\\u0430\u043D\u0430\u043B\u0438\u0437\u0430\u0442\u043E\u0440\u044B\\salesanalyzer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\workrepository\\temp\\temp\\\u043C\u043E\u0434\u0435\u043B\u0438\\sales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|solutionrelative:temp\\\u043C\u043E\u0434\u0435\u043B\u0438\\sales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\workrepository\\temp\\temp\\\u0441\u0435\u0440\u0432\u0438\u0441\u044B\\statisticscalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|solutionrelative:temp\\\u0441\u0435\u0440\u0432\u0438\u0441\u044B\\statisticscalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\workrepository\\temp\\temp\\\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0439 \u0438\u043D\u0442\u0435\u0440\u0444\u0435\u0439\u0441\\userinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|solutionrelative:temp\\\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0439 \u0438\u043D\u0442\u0435\u0440\u0444\u0435\u0439\u0441\\userinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\temp\\forecast.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F0429942-6EF1-486F-AE36-3C93B1B98ECE}|Temp\\Temp.csproj|solutionrelative:temp\\forecast.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,7 +54,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "FileManager.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\\u0420\u0430\u0431\u043E\u0442\u0430 \u0441 \u0444\u0430\u0439\u043B\u0430\u043C\u0438\\FileManager.cs",
+              "RelativeDocumentMoniker": "Temp\\\u0420\u0430\u0431\u043E\u0442\u0430 \u0441 \u0444\u0430\u0439\u043B\u0430\u043C\u0438\\FileManager.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\\u0420\u0430\u0431\u043E\u0442\u0430 \u0441 \u0444\u0430\u0439\u043B\u0430\u043C\u0438\\FileManager.cs",
+              "RelativeToolTip": "Temp\\\u0420\u0430\u0431\u043E\u0442\u0430 \u0441 \u0444\u0430\u0439\u043B\u0430\u043C\u0438\\FileManager.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T12:52:19.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserInterface.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0439 \u0438\u043D\u0442\u0435\u0440\u0444\u0435\u0439\u0441\\UserInterface.cs",
+              "RelativeDocumentMoniker": "Temp\\\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0439 \u0438\u043D\u0442\u0435\u0440\u0444\u0435\u0439\u0441\\UserInterface.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0439 \u0438\u043D\u0442\u0435\u0440\u0444\u0435\u0439\u0441\\UserInterface.cs",
+              "RelativeToolTip": "Temp\\\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0439 \u0438\u043D\u0442\u0435\u0440\u0444\u0435\u0439\u0441\\UserInterface.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T12:51:26.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StatisticsCalculator.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\\u0421\u0435\u0440\u0432\u0438\u0441\u044B\\StatisticsCalculator.cs",
+              "RelativeDocumentMoniker": "Temp\\\u0421\u0435\u0440\u0432\u0438\u0441\u044B\\StatisticsCalculator.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\\u0421\u0435\u0440\u0432\u0438\u0441\u044B\\StatisticsCalculator.cs",
+              "RelativeToolTip": "Temp\\\u0421\u0435\u0440\u0432\u0438\u0441\u044B\\StatisticsCalculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T12:48:30.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DemandForecaster.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\\u0421\u0435\u0440\u0432\u0438\u0441\u044B\\DemandForecaster.cs",
+              "RelativeDocumentMoniker": "Temp\\\u0421\u0435\u0440\u0432\u0438\u0441\u044B\\DemandForecaster.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\\u0421\u0435\u0440\u0432\u0438\u0441\u044B\\DemandForecaster.cs",
+              "RelativeToolTip": "Temp\\\u0421\u0435\u0440\u0432\u0438\u0441\u044B\\DemandForecaster.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T12:47:27.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SalesAnalyzer.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\\u0410\u043D\u0430\u043B\u0438\u0437\u0430\u0442\u043E\u0440\u044B\\SalesAnalyzer.cs",
+              "RelativeDocumentMoniker": "Temp\\\u0410\u043D\u0430\u043B\u0438\u0437\u0430\u0442\u043E\u0440\u044B\\SalesAnalyzer.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\\u0410\u043D\u0430\u043B\u0438\u0437\u0430\u0442\u043E\u0440\u044B\\SalesAnalyzer.cs",
+              "RelativeToolTip": "Temp\\\u0410\u043D\u0430\u043B\u0438\u0437\u0430\u0442\u043E\u0440\u044B\\SalesAnalyzer.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T12:46:50.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Sales.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\\u041C\u043E\u0434\u0435\u043B\u0438\\Sales.cs",
+              "RelativeDocumentMoniker": "Temp\\\u041C\u043E\u0434\u0435\u043B\u0438\\Sales.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\\u041C\u043E\u0434\u0435\u043B\u0438\\Sales.cs",
+              "RelativeToolTip": "Temp\\\u041C\u043E\u0434\u0435\u043B\u0438\\Sales.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T12:46:06.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "forecast.txt",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\forecast.txt",
               "RelativeDocumentMoniker": "Temp\\forecast.txt",
@@ -38,20 +140,20 @@
               "RelativeToolTip": "Temp\\forecast.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-04-09T14:52:22.267Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T14:52:22.267Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "sales.csv",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\sales.csv",
-              "RelativeDocumentMoniker": "Temp\\sales.csv",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\sales.csv",
-              "RelativeToolTip": "Temp\\sales.csv",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\\u0424\u0430\u0439\u043B\u044B\\sales.csv",
+              "RelativeDocumentMoniker": "Temp\\\u0424\u0430\u0439\u043B\u044B\\sales.csv",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\\u0424\u0430\u0439\u043B\u044B\\sales.csv",
+              "RelativeToolTip": "Temp\\\u0424\u0430\u0439\u043B\u044B\\sales.csv",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2025-04-09T14:50:34.793Z"
+              "WhenOpened": "2025-04-09T14:50:34.793Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -61,7 +163,7 @@
               "RelativeDocumentMoniker": "Temp\\Program.cs",
               "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\WorkRepository\\Temp\\Temp\\Program.cs",
               "RelativeToolTip": "Temp\\Program.cs",
-              "ViewState": "AgIAAPMAAAAAAAAAAAAIwAoBAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T14:49:21.008Z",
               "EditorCaption": ""

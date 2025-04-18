@@ -43,15 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Сервисы\DemandForecaster.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Модели\Sales.cs" />
+    <Compile Include="Анализаторы\SalesAnalyzer.cs" />
+    <Compile Include="Пользовательский интерфейс\UserInterface.cs" />
+    <Compile Include="Работа с файлами\FileManager.cs" />
+    <Compile Include="Сервисы\StatisticsCalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="sales.csv" />
+    <None Include="Файлы\sales.csv" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="forecast.txt" />
+    <Content Include="Файлы\forecast.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
