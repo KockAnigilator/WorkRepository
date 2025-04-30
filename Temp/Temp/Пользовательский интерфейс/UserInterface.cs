@@ -21,6 +21,37 @@ namespace Temp.Пользовательский_интерфейс
         }
 
         /// <summary>
+        /// Запрашивает у пользователя список товаров для прогноза
+        /// </summary>
+        public static List<string> GetProductsToForecast(Dictionary<string, double> averages)
+        {
+            Console.WriteLine("\nДоступные товары:");
+            foreach (var product in averages.Keys)
+            {
+                Console.WriteLine($"- {product}");
+            }
+
+            Console.Write("\nВведите названия товаров через запятую (оставьте пустым для всех): ");
+            string input = Console.ReadLine();
+
+            return string.IsNullOrEmpty(input)
+                ? averages.Keys.ToList()
+                : input.Split(',').Select(x => x.Trim()).ToList();
+        }
+
+        /// <summary>
+        /// Выводит информацию о фильтрации выбросов
+        /// </summary>
+        public static void DisplayFilterResults(Dictionary<string, (int Before, int After)> stats)
+        {
+            Console.WriteLine("\nРезультаты фильтрации:");
+            foreach (var item in stats)
+            {
+                Console.WriteLine($"{item.Key}: {item.Value.Before} → {item.Value.After} записей");
+            }
+        }
+
+        /// <summary>
         /// Получает количество дней для прогноза от пользователя
         /// </summary>
         public static int GetForecastDays()

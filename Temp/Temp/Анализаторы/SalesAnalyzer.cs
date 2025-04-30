@@ -39,6 +39,30 @@ namespace Temp.Анализаторы
         }
 
         /// <summary>
+        /// Фильтрует выбросы и возвращает статистику по изменениям
+        /// </summary>
+        public (List<Sale> FilteredSales, Dictionary<string, (int Before, int After)> Stats)
+            RemoveOutliersWithStats(List<Sale> sales)
+        {
+            var stats = new Dictionary<string, (int, int)>();
+            var filtered = RemoveOutliers(sales);
+
+            // Собираем статистику
+            var groupedOriginal = GroupSalesByProduct(sales);
+            var groupedFiltered = GroupSalesByProduct(filtered);
+
+            foreach (var product in groupedOriginal.Keys)
+            {
+                stats[product] = (
+                    groupedOriginal[product].Count,
+                    groupedFiltered.ContainsKey(product) ? groupedFiltered[product].Count : 0
+                );
+            }
+
+            return (filtered, stats);
+        }
+
+        /// <summary>
         /// Группирует продажи по названиям товаров
         /// </summary>
         private Dictionary<string, List<Sale>> GroupSalesByProduct(List<Sale> sales)
